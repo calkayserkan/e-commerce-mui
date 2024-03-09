@@ -1,7 +1,8 @@
+import { Box } from "@mui/joy"
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <Box>Contact</Box>
   )
 }
 
