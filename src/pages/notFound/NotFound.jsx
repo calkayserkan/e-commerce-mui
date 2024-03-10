@@ -55,7 +55,14 @@ function NotFound() {
           mt: 2.5,
           gap: 2.5,
           background: "#04364A",
+          color:"#DAFFFB",
           boxShadow: "0px 20px 25px rgba(0,0,0,.25)",
+          transition: "all .5s ease-in-out ",
+          "&:hover": {
+            background: "#DAFFFB",
+            color:"#04364A",
+            boxShadow: "0px 25px 40px rgba(0,0,0,.5)",
+          }
         }}
       >
         Back To Home <ArrowRightAltIcon />{" "}
