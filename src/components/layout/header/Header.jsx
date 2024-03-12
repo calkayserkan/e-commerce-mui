@@ -84,7 +84,7 @@ function Header() {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow:"0px 0px 25px rgba(0,0,0,.2)"
+            boxShadow:"0px 0px 25px rgba(0,0,0,.2)",
           }}
         >
           <Box
