@@ -1,7 +1,11 @@
-import { Box, Divider, Grid, Input, Typography } from "@mui/joy";
+import { Box, Button, Grid, Typography } from "@mui/joy";
 import notFound from "../../assets/notfound/notFound.webp";
+import Login from "../../components/auth/Login";
+import { useState } from "react";
+import Register from "../../components/auth/Register";
 
 function Auth() {
+  const [value,setValue] = useState(true)
   return (
     <Grid
       container
@@ -16,50 +20,40 @@ function Auth() {
         alignItems: "center",
       }}
     >
-      <Grid
-        container
+      <Box
         sx={{
-          width: "40%",
+          width: "30%",
           height: "100%",
+          ml: { xs: 0, sm: 10 },
           mixBlendMode: "hard-light",
+          display:"flex",
+          flexDirection:"column",
           justifyContent: "center",
           alignItems: "center",
+          background: "rgba(0,100,0,.5)",
+          boxShadow: "0px 25px 0px 25px 25px rgba(0,0,0,1)",
+          backdropFilter: "blur(3px)",
         }}
       >
+        <Box sx={{flexBasis:"50%"}}>
+          {value === true ? <Login /> : <Register/>}
+        </Box>
         <Box
           sx={{
-            width: "80%",
-            height: "85%",
-            background: "rgba(0,100,0,.5)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow: "0px 0px 25px rgba(0,0,0,1)",
-            borderRadius: 15,
-            gap: 7.5,
+            gap: 3,
           }}
         >
-          <Typography level="title-lg" sx={{ color: "white" }}>Sign in</Typography>
-          <Input placeholder="Try to submit with no text!" required />
-          <Input placeholder="Try to submit with no text!" required />
-          <Divider
-            sx={{
-              background: "black",
-              color: "white",
-              height:"1px",
-              width:"75%",
-              alignSelf: "center",
-            }}
-          >
-            Or
-          </Divider>
-          <Grid container sx={{ gap: 15, color: "white" }}>
-            <Box>Google</Box>
-            <Box>Facebook</Box>
-          </Grid>
+          <Typography sx={{ color: "white", flexBasis:"50%" }}>
+          {value === true ? "You don't have an account" : "You already have an account"}
+            
+          </Typography>
+          <Button onClick={()=> setValue(!value)} sx={{ background: "white", color: "black" }}>{value === true ? "Sign up" : "Sign in"}</Button>
         </Box>
-      </Grid>
+      </Box>
     </Grid>
   );
 }

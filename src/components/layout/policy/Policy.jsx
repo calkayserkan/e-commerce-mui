@@ -14,6 +14,7 @@ function Policy() {
         height: "10%",
         background: "#DAFFFB",
         overflowX: "hidden",
+        zIndex:99
       }}
     >
       <Marquee style={{marginTop:17.5}}>
