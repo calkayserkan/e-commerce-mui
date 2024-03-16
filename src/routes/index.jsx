@@ -4,7 +4,7 @@ import HomePage from "../pages/home/HomePage"
 import NotFound from "../pages/notFound/NotFound"
 import ShopPage from "../pages/shop/ShopPage"
 import Contact from "../pages/contact/Contact";
-import Cart from "../pages/cart/Cart";
+import CartPage from "../pages/cart/CartPage";
 import Auth from "../pages/auth/Auth";
 import MainLayout from "../layout/homeLayout/MainLayout";
 
@@ -27,15 +27,15 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/cart',
-                element:<Cart/>
+                element:<CartPage/>
             },
             {
                 path:'/blog-details',
-                element:<Cart/>
+                element:<CartPage/>
             },
             {
                 path:'/product-details',
-                element:<Cart/>
+                element:<CartPage/>
             },
             {
                 path:'/auth',
