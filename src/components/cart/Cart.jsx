@@ -26,7 +26,8 @@ function Cart() {
           sx={{
             width: "85%",
             minHeight:"70vh",
-            background: "#176B87",
+            background: "#DAFFFB",
+            border:"7.5px solid #176B87",
             borderRadius: 15,
             boxShadow: "0px 0px 25px rgba(0,0,0,1)",
             display:"flex",
@@ -50,9 +51,10 @@ function Cart() {
           sx={{
             width: "60%",
             height: "70vh",
-            background: "#176B87",
+            background: "#DAFFFB",
             borderRadius: 15,
             boxShadow: "0px 0px 25px rgba(0,0,0,1)",
+            border:"7.5px solid #176B87",
             display:"flex",
             flexDirection: "column",
             justifyContent: "start",

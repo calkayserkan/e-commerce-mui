@@ -1,4 +1,3 @@
-import Table from "@mui/joy/Table";
 import image from "../../assets/blogs/blog5.jpg";
 import image2 from "../../assets/blogs/blog3.jpg";
 import { Box, Typography } from "@mui/joy";
@@ -23,13 +22,13 @@ function CartTable() {
         flexDirection: "column",
         justifyContent: "start",
         alignItems: "start",
-        mt:5,
+        mt: 5,
       }}
     >
       <Box
         sx={{
           width: "100%",
-          px: 5,
+          px: 1,
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
@@ -39,44 +38,58 @@ function CartTable() {
         <Typography level="title-md" sx={{ width: "15%" }}>
           Image
         </Typography>
-        <Typography level="title-md" sx={{ width: "22.5%" }}>
+        <Typography level="title-md" sx={{ width: "30%",textAlign:"center"  }}>
           Product
         </Typography>
-        <Typography level="title-md" sx={{ width: "15%" }}>
+        <Typography level="title-md" sx={{ width: "10%" }}>
           Price
         </Typography>
-        <Typography level="title-md" sx={{ width: "20%" }}>
+        <Typography level="title-md" sx={{ width: "10%" }}>
           Quantity
         </Typography>
         <Typography level="title-md" sx={{ width: "10%" }}>
           SubTotal
         </Typography>
       </Box>
-      <Table hoverRow sx={{ width: "100%", mt: 2.5 }}>
-        {rows.map((item, key) => (
-          <tbody key={key}>
-            <tr>
-              <td>
-                <Box
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    backgroundImage: `url(${item.image})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    borderRadius: 5,
-                    boxShadow: "0px 0px 15px rgba(0, 0,0,.5)",
-                  }}
-                ></Box>
-              </td>
-              <td><Typography level="title-sm">{item.product}</Typography></td>
-              <td style={{ textAlign: "center" }}><Typography level="title-sm">{item.price}</Typography></td>
-              <td style={{ textAlign: "center" }}><Typography level="title-sm">{item.quantity}</Typography></td>
-              <td style={{ textAlign: "center" }}><Typography level="title-sm">{item.subTotal}</Typography></td>
-            </tr>
-          </tbody>
-        ))}
-      </Table>
+      {rows.map((item, key) => (
+        <Box
+          key={key}
+          sx={{
+            width: "100%",
+            px: 1,
+            py:1,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            boxShadow:"0px 0px 15px rgba(0,0,0,.2)",
+            background:"#64CCC5",
+            borderRadius:10,
+            alignItems: "center",
+            mt:3,
+            transition:"all .5s ease-in-out",
+            "&:hover":{
+              boxShadow:"0px 10px 25px rgba(0,0,0,.5)",
+            }
+          }}
+        >
+          <Box
+            sx={{
+              width: "100px",
+              height: "100px",
+              backgroundImage: `url(${item.image})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              borderRadius: 7.5,
+              boxShadow: "0px 0px 15px rgba(0, 0,0,.5)",
+            }}
+          ></Box>
+          <Typography level="title-sm" sx={{ width: "30%" }}>{item.product}</Typography>
+          <Typography level="title-sm" sx={{ width: "10%",textAlign:"center" }}>{item.price}</Typography>
+          <Typography level="title-sm" sx={{ width: "10%",textAlign:"center" }}>{item.quantity}</Typography>
+          <Typography level="title-sm" sx={{ width: "10%",textAlign:"center" }}>{item.subTotal}</Typography>
+        </Box>
+      ))}
+      
     </Box>
   );
 }
