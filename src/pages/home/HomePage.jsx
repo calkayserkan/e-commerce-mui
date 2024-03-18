@@ -1,5 +1,5 @@
 import { Box } from "@mui/joy";
-import Blogs from "../../components/blogs/Blogs";
+import Blogs from "../../components/blogs/home/Blogs";
 import Brands from "../../components/brands/Brands";
 import CampaignSingle from "../../components/campaignSingle/CampaignSingle";
 import Campaigns from "../../components/campaigns/Campaigns";

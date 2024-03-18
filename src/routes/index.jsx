@@ -7,6 +7,8 @@ import Contact from "../pages/contact/Contact";
 import CartPage from "../pages/cart/CartPage";
 import Auth from "../pages/auth/Auth";
 import MainLayout from "../layout/homeLayout/MainLayout";
+import BlogDetails from "../pages/blogDetails/BlogDetails";
+import BlogsPage from "../pages/blog/BlogsPage";
 
 const routes = createBrowserRouter([
     {
@@ -30,8 +32,12 @@ const routes = createBrowserRouter([
                 element:<CartPage/>
             },
             {
+                path:'/blogs',
+                element:<BlogsPage/>
+            },
+            {
                 path:'/blog-details',
-                element:<CartPage/>
+                element:<BlogDetails/>
             },
             {
                 path:'/product-details',

@@ -9,9 +9,9 @@ import {
 } from "@mui/joy";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 
-import blog3 from "../../assets/blogs/blog3.jpg";
-import blog4 from "../../assets/blogs/blog4.jpg";
-import blog5 from "../../assets/blogs/blog5.jpg";
+import blog3 from "../../../assets/blogs/blog3.jpg";
+import blog4 from "../../../assets/blogs/blog4.jpg";
+import blog5 from "../../../assets/blogs/blog5.jpg";
 
 function Blogs() {
   function createData(title,desc,img) {
